@@ -15,8 +15,8 @@ import java.sql.DriverManager;
  */
 public class MyConnection {
 
-    private static final String username = "Leviz";
-    private static final String password = "Levizz#311";
+    private static final String username = "root";
+    private static final String password = "";
     private static final String dataConn = "jdbc:mysql://localhost:3306/students_management";
     private static Connection con = null;
 
@@ -26,7 +26,9 @@ public class MyConnection {
             con = DriverManager.getConnection(dataConn, username, password);
         } catch (Exception e) {
             System.out.println(e.getMessage());
+            
         }
         return con;
+        
     }
 }

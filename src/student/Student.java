@@ -35,6 +35,7 @@ public class Student {
             while (rs.next()) {
                 id = rs.getInt(1);
             }
+            
         } catch (Exception e) {
             Logger.getLogger(Student.class.getName()).log(Level.SEVERE, null, e);
         }

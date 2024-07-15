@@ -237,10 +237,10 @@ public class Home extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
         lableImage = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
@@ -429,6 +429,11 @@ public class Home extends javax.swing.JFrame {
         tfGmail.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
 
         tfPhoneNumber.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
+        tfPhoneNumber.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfPhoneNumberActionPerformed(evt);
+            }
+        });
         tfPhoneNumber.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 tfPhoneNumberKeyTyped(evt);
@@ -476,6 +481,9 @@ public class Home extends javax.swing.JFrame {
         jPanel6.setBackground(new java.awt.Color(255, 204, 255));
         jPanel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 255), 3, true));
 
+        jLabel14.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel14.setText("Image");
+
         jButton1.setBackground(new java.awt.Color(153, 255, 153));
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jButton1.setText("Browser");
@@ -498,9 +506,6 @@ public class Home extends javax.swing.JFrame {
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lableImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-
-        jLabel14.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel14.setText("Image");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -655,7 +660,7 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnRefresh)
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1071,7 +1076,7 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton12)
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(108, Short.MAX_VALUE))
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1495,7 +1500,7 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton21)
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(108, Short.MAX_VALUE))
         );
         jPanel24Layout.setVerticalGroup(
             jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1798,7 +1803,7 @@ public class Home extends javax.swing.JFrame {
             jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel33Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 678, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 750, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel33Layout.setVerticalGroup(
@@ -1942,30 +1947,6 @@ public class Home extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void searchField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_searchField2ActionPerformed
-
-    private void searchField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_searchField1ActionPerformed
-
-    private void searchFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_searchFieldActionPerformed
-
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
-
-    private void logoutClicked(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutClicked
-        int choose = JOptionPane.showConfirmDialog(this, "Do you want to logout now?", "Select", JOptionPane.YES_NO_OPTION);
-        if (choose == 0) {
-            new Login().setVisible(true);
-            this.dispose();
-        }
-    }//GEN-LAST:event_logoutClicked
-
     private void jPanel2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseDragged
         int x = evt.getXOnScreen();
         int y = evt.getYOnScreen();
@@ -1976,114 +1957,6 @@ public class Home extends javax.swing.JFrame {
         xx = evt.getX();
         yy = evt.getY();
     }//GEN-LAST:event_jPanel2MousePressed
-
-    private void clearClicked(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearClicked
-        clearStudent();
-    }//GEN-LAST:event_clearClicked
-
-    private void addNewStudent(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNewStudent
-        if (isEmptyStudent()) {
-            if (!student.isEmailExist(tfGmail.getText())) {
-                if (!student.isPhoneExist(tfPhoneNumber.getText())) {
-                    int id = student.getMax();
-                    String name = tfStudentName.getText();
-                    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-                    String date = dateFormat.format(jDateOfBirth.getDate());
-                    String gender = cboGender.getSelectedItem().toString();
-                    String email = tfGmail.getText();
-                    String phone = tfPhoneNumber.getText();
-                    String father = tfFatherName.getText();
-                    String mother = tfMotherName.getText();
-                    String address1 = tfAddress1.getText();
-                    String address2 = tfAddress2.getText();
-                    student.insert(id, name, date, gender, email, phone, father, mother, address1, address2, imagePath);
-                    jTable1.setModel(new DefaultTableModel(null, new Object[]{"Student ID", "Student Name", "Date Of Birth", "Gender", "Email", "Phone Number", "Father Name", "Mother Name", "Address Line 1", "Address Line 2", "Image Path"}));
-                    student.getStudentValue(jTable1, "");
-                    clearStudent();
-                } else {
-                    JOptionPane.showMessageDialog(this, "This phone number is already exists!");
-                }
-                
-            } else {
-                JOptionPane.showMessageDialog(this, "This email already exists");
-            }
-            
-        }
-    }//GEN-LAST:event_addNewStudent
-
-    private void tfPhoneNumberKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfPhoneNumberKeyTyped
-        if (!Character.isDigit(evt.getKeyChar())) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_tfPhoneNumberKeyTyped
-
-    private void updateClicked(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateClicked
-        if (isEmptyStudent()) {
-            int id = Integer.parseInt(tfStudentID.getText());
-            if (student.isIdExist(id)) {
-                if (check()) {
-                    String name = tfStudentName.getText();
-                    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-                    String date = dateFormat.format(jDateOfBirth.getDate());
-                    String gender = cboGender.getSelectedItem().toString();
-                    String email = tfGmail.getText();
-                    String phone = tfPhoneNumber.getText();
-                    String father = tfFatherName.getText();
-                    String mother = tfMotherName.getText();
-                    String address1 = tfAddress1.getText();
-                    String address2 = tfAddress2.getText();
-                    student.update(id, name, date, gender, email, phone, father, mother, address1, address2, imagePath);
-                    jTable1.setModel(new DefaultTableModel(null, new Object[]{"Student ID", "Student Name", "Date Of Birth", "Gender", "Email", "Phone Number", "Father Name", "Mother Name", "Address Line 1", "Address Line 2", "Image Path"}));
-                    student.getStudentValue(jTable1, "");
-                    clearStudent();
-                }
-            } else {
-                JOptionPane.showMessageDialog(this, "Student id doesn't exist");
-            }
-        }
-    }//GEN-LAST:event_updateClicked
-
-    private void deleteClicked(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteClicked
-        int id = Integer.parseInt(tfStudentID.getText());
-        if (student.isIdExist(id)) {
-            if (student.isIdExist(id)) {
-                student.delete(id);
-                jTable1.setModel(new DefaultTableModel(null, new Object[]{"Student ID", "Student Name", "Date Of Birth", "Gender", "Email", "Phone Number", "Father Name", "Mother Name", "Address Line 1", "Address Line 2", "Image Path"}));
-                student.getStudentValue(jTable1, "");
-                clearStudent();
-            }
-        } else {
-            JOptionPane.showMessageDialog(this, "Student id doesn't exists");
-        }
-    }//GEN-LAST:event_deleteClicked
-
-    private void printClicked(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_printClicked
-        try {
-            MessageFormat header = new MessageFormat("Student Information");
-            MessageFormat footer = new MessageFormat("Page{0,number, integer}");
-            jTable1.print(JTable.PrintMode.FIT_WIDTH, header, footer);
-            
-        } catch (PrinterException ex) {
-            Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_printClicked
-
-    private void loadImageClicked(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loadImageClicked
-        JFileChooser file = new JFileChooser();
-        file.setCurrentDirectory(new File(System.getProperty("user.home")));
-        
-        FileNameExtensionFilter filter = new FileNameExtensionFilter("*.image", "jpg", "gif", "png");
-        file.addChoosableFileFilter(filter);
-        int output = file.showSaveDialog(file);
-        if (output == JFileChooser.APPROVE_OPTION) {
-            File selectFile = file.getSelectedFile();
-            String path = selectFile.getAbsolutePath();
-            lableImage.setIcon(imageAdjust(path, null));
-            imagePath = path;
-        } else {
-            JOptionPane.showMessageDialog(this, "No image selected");
-        }
-    }//GEN-LAST:event_loadImageClicked
 
     // display current time and date
     public void setTime() {
@@ -2119,6 +1992,222 @@ public class Home extends javax.swing.JFrame {
         ImageIcon icon = new ImageIcon(newImage);
         return icon;
     }
+    
+    public boolean check() {
+        String newEmail = tfGmail.getText();
+        String newPhone = tfPhoneNumber.getText();
+        String oldEmail = model.getValueAt(rowIndex, 4).toString();
+        String oldPhone = model.getValueAt(rowIndex, 5).toString();
+        if (newEmail.equals(oldEmail) && newPhone.equals(oldPhone)) {
+            return false;
+        } else {
+            if (!newEmail.equals(oldEmail)) {
+                boolean x = student.isEmailExist(newEmail);
+                if (x) {
+                    JOptionPane.showMessageDialog(this, "This email already exists");
+                }
+                return x;
+            }
+            if (!newPhone.equals(oldPhone)) {
+                boolean x = student.isPhoneExist(newPhone);
+                if (x) {
+                    JOptionPane.showMessageDialog(this, "This email already exists");
+                }
+                return x;
+            }
+        }
+        return false;
+    }
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        for (double i = 0.1; i <= 1.0; i += 0.1) {
+            String s = i + "";
+            float f = Float.valueOf(s);
+            this.setOpacity(f);
+            try {
+                Thread.sleep(40);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }//GEN-LAST:event_formWindowOpened
+
+    private void logoutClicked(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutClicked
+        int choose = JOptionPane.showConfirmDialog(this, "Do you want to logout now?", "Select", JOptionPane.YES_NO_OPTION);
+        if (choose == 0) {
+            new Login().setVisible(true);
+            this.dispose();
+        }
+    }//GEN-LAST:event_logoutClicked
+
+    private void jButton35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton35ActionPerformed
+        jTextField25.setText(null);
+        jLabel30.setText("CGPA: 0.0");
+        jTable4.setModel(new DefaultTableModel(null, new Object[]{"ID", "Student ID", "Semester", "Course 1", "Score 1", "Course 2", "Score 2", "Course 3", "Score 3", "Course 4", "Score 4", "Course 5", "Score 5", "Average"}));
+    }//GEN-LAST:event_jButton35ActionPerformed
+
+    private void jButton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton34ActionPerformed
+        try {
+            MessageFormat header = new MessageFormat("Marks Sheet  Student ID" + jTextField25.getName() + "   " + jLabel30.getText());
+            MessageFormat footer = new MessageFormat("Page{0,number, integer}");
+            jTable4.print(JTable.PrintMode.FIT_WIDTH, header, footer);
+
+        } catch (PrinterException ex) {
+            Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton34ActionPerformed
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        if (jTextField25.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Please enter a student id");
+        } else {
+            int sid = Integer.parseInt(jTextField25.getText());
+            if (markSheet.isIdExist(sid)) {
+                jTable4.setModel(new DefaultTableModel(null, new Object[]{"ID", "Student ID", "Semester", "Course 1", "Score 1", "Course 2", "Score 2", "Course 3", "Score 3", "Course 4", "Score 4", "Course 5", "Score 5", "Average"}));
+                markSheet.getScoreValue(jTable4, sid);
+                String cgpa = String.valueOf(String.format("%.2f", markSheet.getCGPA(sid)));
+                jLabel30.setText("CGPA: " + cgpa);
+            } else {
+                JOptionPane.showMessageDialog(this, "No scores founded");
+            }
+        }
+    }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
+        clearScore();
+    }//GEN-LAST:event_jButton26ActionPerformed
+
+    private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
+        try {
+            MessageFormat header = new MessageFormat("Students Scores");
+            MessageFormat footer = new MessageFormat("Page{0,number, integer}");
+            jTable3.print(JTable.PrintMode.FIT_WIDTH, header, footer);
+
+        } catch (PrinterException ex) {
+            Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton25ActionPerformed
+
+    private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
+        int id = Integer.parseInt(jTextField13.getText());
+        if (score.isIdExist(id)) {
+            if (isNumeric(jTextScore1.getText()) && isNumeric(jTextScore2.getText()) && isNumeric(jTextScore3.getText()) && isNumeric(jTextScore4.getText()) && isNumeric(jTextScore5.getText())) {
+                double score1 = Double.parseDouble(jTextScore1.getText());
+                double score2 = Double.parseDouble(jTextScore2.getText());
+                double score3 = Double.parseDouble(jTextScore3.getText());
+                double score4 = Double.parseDouble(jTextScore4.getText());
+                double score5 = Double.parseDouble(jTextScore5.getText());
+
+                double average = (score1 + score2 + score3 + score4 + score5) / 5;
+                nf.setMaximumFractionDigits(2);
+                score.update(id, score1, score2, score3, score4, score5, Double.parseDouble(nf.format(average)));
+                jTable3.setModel(new DefaultTableModel(null, new Object[]{"ID", "Student ID", "Semester", "Course 1", "Score 1", "Course 2", "Score 2", "Course 3", "Score 3", "Course 4", "Score 4", "Course 5", "Score 5", "Average"}));
+                score.getScoreValue(jTable3, "");
+                clearScore();
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Score id doesn't exist");
+        }
+    }//GEN-LAST:event_jButton23ActionPerformed
+
+    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+        if (!jTextField14.getText().isEmpty()) {
+            if (!score.isIdExist(Integer.parseInt(jTextField13.getText()))) {
+                int sid = Integer.parseInt(jTextField14.getText());
+                int semesterNo = Integer.parseInt(jTextSemester.getText());
+                if (score.isSidSemesterExist(sid, semesterNo)) {
+                    if (isNumeric(jTextScore1.getText()) && isNumeric(jTextScore2.getText()) && isNumeric(jTextScore3.getText()) && isNumeric(jTextScore4.getText()) && isNumeric(jTextScore5.getText())) {
+                        int id = score.getMax();
+                        String course1 = jTextCourse1.getText();
+                        String course2 = jTextCourse2.getText();
+                        String course3 = jTextCourse3.getText();
+                        String course4 = jTextCourse4.getText();
+                        String course5 = jTextCourse5.getText();
+
+                        double score1 = Double.parseDouble(jTextScore1.getText());
+                        double score2 = Double.parseDouble(jTextScore2.getText());
+                        double score3 = Double.parseDouble(jTextScore3.getText());
+                        double score4 = Double.parseDouble(jTextScore4.getText());
+                        double score5 = Double.parseDouble(jTextScore5.getText());
+
+                        double average = (score1 + score2 + score3 + score4 + score5) / 5;
+                        nf.setMaximumFractionDigits(2);
+                        score.insert(id, sid, semesterNo, course1, course2, course3, course4, course5, score1, score2, score3, score4, score5, Double.parseDouble(nf.format(average)));
+                        jTable3.setModel(new DefaultTableModel(null, new Object[]{"ID", "Student ID", "Semester", "Course 1", "Score 1", "Course 2", "Score 2", "Course 3", "Score 3", "Course 4", "Score 4", "Course 5", "Score 5", "Average"}));
+                        score.getScoreValue(jTable3, "");
+                        clearScore();
+                    }
+                } else {
+                    JOptionPane.showMessageDialog(this, "Semester " + semesterNo + " score already added");
+                }
+            } else {
+                JOptionPane.showMessageDialog(this, "Score id already exist");
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "No student selected");
+        }
+    }//GEN-LAST:event_jButton22ActionPerformed
+
+    private void jTable3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable3MouseClicked
+        model = (DefaultTableModel) jTable3.getModel();
+        rowIndex = jTable3.getSelectedRow();
+        jTextField13.setText(model.getValueAt(rowIndex, 0).toString());
+        jTextField14.setText(model.getValueAt(rowIndex, 1).toString());
+        jTextSemester.setText(model.getValueAt(rowIndex, 2).toString());
+
+        jTextCourse1.setText(model.getValueAt(rowIndex, 3).toString());
+        jTextCourse2.setText(model.getValueAt(rowIndex, 5).toString());
+        jTextCourse3.setText(model.getValueAt(rowIndex, 7).toString());
+        jTextCourse4.setText(model.getValueAt(rowIndex, 9).toString());
+        jTextCourse5.setText(model.getValueAt(rowIndex, 11).toString());
+
+        jTextScore1.setText(model.getValueAt(rowIndex, 4).toString());
+        jTextScore2.setText(model.getValueAt(rowIndex, 6).toString());
+        jTextScore3.setText(model.getValueAt(rowIndex, 8).toString());
+        jTextScore4.setText(model.getValueAt(rowIndex, 10).toString());
+        jTextScore5.setText(model.getValueAt(rowIndex, 12).toString());
+    }//GEN-LAST:event_jTable3MouseClicked
+
+    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+        jTable3.setModel(new DefaultTableModel(null, new Object[]{"ID", "Student ID", "Semester", "Course 1", "Score 1", "Course 2", "Score 2", "Course 3", "Score 3", "Course 4", "Score 4", "Course 5", "Score 5", "Average"}));
+        score.getScoreValue(jTable3, "");
+        searchField2.setText(null);
+    }//GEN-LAST:event_jButton21ActionPerformed
+
+    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+        if (searchField2.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Search field is empty");
+        } else {
+            jTable3.setModel(new DefaultTableModel(null, new Object[]{"ID", "Student ID", "Semester", "Course 1", "Score 1", "Course 2", "Score 2", "Course 3", "Score 3", "Course 4", "Score 4", "Course 5", "Score 5", "Average"}));
+            score.getScoreValue(jTable3, searchField2.getText());
+        }
+    }//GEN-LAST:event_jButton20ActionPerformed
+
+    private void searchField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_searchField2ActionPerformed
+
+    private void jTextField15KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField15KeyTyped
+        if (!Character.isDigit(evt.getKeyChar())) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTextField15KeyTyped
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        if (jTextField12.getText().isEmpty() || jTextField15.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Student id or semester number is missing");
+        } else {
+            int sid = Integer.parseInt(jTextField12.getText());
+            int semNo = Integer.parseInt(jTextField15.getText());
+            score.getDetails(sid, semNo);
+        }
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jTextField12KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField12KeyTyped
+        if (!Character.isDigit(evt.getKeyChar())) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTextField12KeyTyped
 
     private void saveClicked(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveClicked
         if (jTextField11.getText().isEmpty() || jComboBox1.getItemCount() == 0) {
@@ -2132,7 +2221,7 @@ public class Home extends javax.swing.JFrame {
             String course3 = jComboBox6.getSelectedItem().toString();
             String course4 = jComboBox7.getSelectedItem().toString();
             String course5 = jComboBox8.getSelectedItem().toString();
-            
+
             if (course.isSemesterExist(sid, semesterNO)) {
                 JOptionPane.showMessageDialog(this, "This student has already taken semester " + semesterNO);
             } else {
@@ -2163,32 +2252,152 @@ public class Home extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_saveClicked
-    
-    public boolean check() {
-        String newEmail = tfGmail.getText();
-        String newPhone = tfPhoneNumber.getText();
-        String oldEmail = model.getValueAt(rowIndex, 4).toString();
-        String oldPhone = model.getValueAt(rowIndex, 5).toString();
-        if (newEmail.equals(oldEmail) && newPhone.equals(oldPhone)) {
-            return false;
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        clearCourse();
+    }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        try {
+            MessageFormat header = new MessageFormat("Allstudent courses Information");
+            MessageFormat footer = new MessageFormat("Page{0,number, integer}");
+            jTable2.print(JTable.PrintMode.FIT_WIDTH, header, footer);
+
+        } catch (PrinterException ex) {
+            Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        jTable2.setModel(new DefaultTableModel(null, new Object[]{"ID", "Student ID", "Semester", "Course 1", "Course 2", "Course 3", "Course 4", "Course 5"}));
+        course.getCourseValue(jTable2, "");
+        searchField1.setText(null);
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        if (searchField1.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Search field is empty");
         } else {
-            if (!newEmail.equals(oldEmail)) {
-                boolean x = student.isEmailExist(newEmail);
-                if (x) {
-                    JOptionPane.showMessageDialog(this, "This email already exists");
+            jTable2.setModel(new DefaultTableModel(null, new Object[]{"ID", "Student ID", "Semester", "Course 1", "Course 2", "Course 3", "Course 4", "Course 5"}));
+            course.getCourseValue(jTable2, searchField1.getText());
+        }
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void searchField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_searchField1ActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        if (jTextField9.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Please enter a student id");
+        } else {
+            int id = Integer.parseInt(jTextField9.getText());
+            if (course.getId(id)) {
+                jComboBox1.removeAllItems();
+                int semester = course.countSemester(id);
+                if (semester >= 0) {
+                    for (int i = 1; i <= semester + 1; i++) {
+                        jComboBox1.addItem(i + "");
+                    }
                 }
-                return x;
-            }
-            if (!newPhone.equals(oldPhone)) {
-                boolean x = student.isPhoneExist(newPhone);
-                if (x) {
-                    JOptionPane.showMessageDialog(this, "This email already exists");
-                }
-                return x;
             }
         }
-        return false;
-    }
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jTextField9KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField9KeyTyped
+        if (!Character.isDigit(evt.getKeyChar())) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTextField9KeyTyped
+
+    private void clearClicked(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearClicked
+        clearStudent();
+    }//GEN-LAST:event_clearClicked
+
+    private void printClicked(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_printClicked
+        try {
+            MessageFormat header = new MessageFormat("Student Information");
+            MessageFormat footer = new MessageFormat("Page{0,number, integer}");
+            jTable1.print(JTable.PrintMode.FIT_WIDTH, header, footer);
+
+        } catch (PrinterException ex) {
+            Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_printClicked
+
+    private void deleteClicked(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteClicked
+        int id = Integer.parseInt(tfStudentID.getText());
+        if (student.isIdExist(id)) {
+            if (student.isIdExist(id)) {
+                student.delete(id);
+                jTable1.setModel(new DefaultTableModel(null, new Object[]{"Student ID", "Student Name", "Date Of Birth", "Gender", "Email", "Phone Number", "Father Name", "Mother Name", "Address Line 1", "Address Line 2", "Image Path"}));
+                student.getStudentValue(jTable1, "");
+                clearStudent();
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Student id doesn't exists");
+        }
+    }//GEN-LAST:event_deleteClicked
+
+    private void updateClicked(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateClicked
+        if (isEmptyStudent()) {
+            int id = Integer.parseInt(tfStudentID.getText());
+            if (student.isIdExist(id)) {
+                if (check()) {
+                    String name = tfStudentName.getText();
+                    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                    String date = dateFormat.format(jDateOfBirth.getDate());
+                    String gender = cboGender.getSelectedItem().toString();
+                    String email = tfGmail.getText();
+                    String phone = tfPhoneNumber.getText();
+                    String father = tfFatherName.getText();
+                    String mother = tfMotherName.getText();
+                    String address1 = tfAddress1.getText();
+                    String address2 = tfAddress2.getText();
+                    student.update(id, name, date, gender, email, phone, father, mother, address1, address2, imagePath);
+                    jTable1.setModel(new DefaultTableModel(null, new Object[]{"Student ID", "Student Name", "Date Of Birth", "Gender", "Email", "Phone Number", "Father Name", "Mother Name", "Address Line 1", "Address Line 2", "Image Path"}));
+                    student.getStudentValue(jTable1, "");
+                    clearStudent();
+                }
+            } else {
+                JOptionPane.showMessageDialog(this, "Student id doesn't exist");
+            }
+        }
+    }//GEN-LAST:event_updateClicked
+
+    private void addNewStudent(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNewStudent
+        if (isEmptyStudent()) {
+            if (!student.isEmailExist(tfGmail.getText())) {
+                if (!student.isPhoneExist(tfPhoneNumber.getText())) {
+                    int id = student.getMax();
+                    String name = tfStudentName.getText();
+                    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                    String date = dateFormat.format(jDateOfBirth.getDate());
+                    String gender = cboGender.getSelectedItem().toString();
+                    String email = tfGmail.getText();
+                    String phone = tfPhoneNumber.getText();
+                    String father = tfFatherName.getText();
+                    String mother = tfMotherName.getText();
+                    String address1 = tfAddress1.getText();
+                    String address2 = tfAddress2.getText();
+                    student.insert(id, name, date, gender, email, phone, father, mother, address1, address2, imagePath);
+                    jTable1.setModel(new DefaultTableModel(null, new Object[]{"Student ID", "Student Name", "Date Of Birth", "Gender", "Email", "Phone Number", "Father Name", "Mother Name", "Address Line 1", "Address Line 2", "Image Path"}));
+                    student.getStudentValue(jTable1, "");
+                    clearStudent();
+                } else {
+                    JOptionPane.showMessageDialog(this, "This phone number is already exists!");
+                }
+
+            } else {
+                JOptionPane.showMessageDialog(this, "This email already exists");
+            }
+
+        }
+    }//GEN-LAST:event_addNewStudent
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         model = (DefaultTableModel) jTable1.getModel();
@@ -2218,6 +2427,12 @@ public class Home extends javax.swing.JFrame {
         lableImage.setIcon(imageAdjust(path, null));
     }//GEN-LAST:event_jTable1MouseClicked
 
+    private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
+        jTable1.setModel(new DefaultTableModel(null, new Object[]{"Student ID", "Student Name", "Date Of Birth", "Gender", "Email", "Phone Number", "Father Name", "Mother Name", "Address Line 1", "Address Line 2", "Image Path"}));
+        student.getStudentValue(jTable1, "");
+        searchField.setText(null);
+    }//GEN-LAST:event_btnRefreshActionPerformed
+
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
         if (searchField.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Please enter a student id");
@@ -2227,242 +2442,36 @@ public class Home extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnSearchActionPerformed
 
-    private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
-        jTable1.setModel(new DefaultTableModel(null, new Object[]{"Student ID", "Student Name", "Date Of Birth", "Gender", "Email", "Phone Number", "Father Name", "Mother Name", "Address Line 1", "Address Line 2", "Image Path"}));
-        student.getStudentValue(jTable1, "");
-        searchField.setText(null);
-    }//GEN-LAST:event_btnRefreshActionPerformed
+    private void searchFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_searchFieldActionPerformed
 
-    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
-        clearCourse();
-    }//GEN-LAST:event_jButton15ActionPerformed
+    private void loadImageClicked(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loadImageClicked
+        JFileChooser file = new JFileChooser();
+        file.setCurrentDirectory(new File(System.getProperty("user.home")));
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        if (jTextField9.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Please enter a student id");
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("*.image", "jpg", "gif", "png");
+        file.addChoosableFileFilter(filter);
+        int output = file.showSaveDialog(file);
+        if (output == JFileChooser.APPROVE_OPTION) {
+            File selectFile = file.getSelectedFile();
+            String path = selectFile.getAbsolutePath();
+            lableImage.setIcon(imageAdjust(path, null));
+            imagePath = path;
         } else {
-            int id = Integer.parseInt(jTextField9.getText());
-            if (course.getId(id)) {
-                jComboBox1.removeAllItems();
-                int semester = course.countSemester(id);
-                if (semester >= 0) {
-                    for (int i = 1; i <= semester + 1; i++) {
-                        jComboBox1.addItem(i + "");
-                    }
-                }
-            }
+            JOptionPane.showMessageDialog(this, "No image selected");
         }
-    }//GEN-LAST:event_jButton10ActionPerformed
+    }//GEN-LAST:event_loadImageClicked
 
-    private void jTextField9KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField9KeyTyped
+    private void tfPhoneNumberKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfPhoneNumberKeyTyped
         if (!Character.isDigit(evt.getKeyChar())) {
             evt.consume();
         }
-    }//GEN-LAST:event_jTextField9KeyTyped
+    }//GEN-LAST:event_tfPhoneNumberKeyTyped
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        if (searchField1.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Search field is empty");
-        } else {
-            jTable2.setModel(new DefaultTableModel(null, new Object[]{"ID", "Student ID", "Semester", "Course 1", "Course 2", "Course 3", "Course 4", "Course 5"}));
-            course.getCourseValue(jTable2, searchField1.getText());
-        }
-    }//GEN-LAST:event_jButton11ActionPerformed
-
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        jTable2.setModel(new DefaultTableModel(null, new Object[]{"ID", "Student ID", "Semester", "Course 1", "Course 2", "Course 3", "Course 4", "Course 5"}));
-        course.getCourseValue(jTable2, "");
-        searchField1.setText(null);
-    }//GEN-LAST:event_jButton12ActionPerformed
-
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        try {
-            MessageFormat header = new MessageFormat("Allstudent courses Information");
-            MessageFormat footer = new MessageFormat("Page{0,number, integer}");
-            jTable2.print(JTable.PrintMode.FIT_WIDTH, header, footer);
-            
-        } catch (PrinterException ex) {
-            Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_jButton14ActionPerformed
-
-    private void jTextField12KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField12KeyTyped
-        if (!Character.isDigit(evt.getKeyChar())) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_jTextField12KeyTyped
-
-    private void jTextField15KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField15KeyTyped
-        if (!Character.isDigit(evt.getKeyChar())) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_jTextField15KeyTyped
-
-    private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
-        clearScore();
-    }//GEN-LAST:event_jButton26ActionPerformed
-
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        if (jTextField12.getText().isEmpty() || jTextField15.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Student id or semester number is missing");
-        } else {
-            int sid = Integer.parseInt(jTextField12.getText());
-            int semNo = Integer.parseInt(jTextField15.getText());
-            score.getDetails(sid, semNo);
-        }
-    }//GEN-LAST:event_jButton13ActionPerformed
-
-    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
-        if (!jTextField14.getText().isEmpty()) {
-            if (!score.isIdExist(Integer.parseInt(jTextField13.getText()))) {
-                int sid = Integer.parseInt(jTextField14.getText());
-                int semesterNo = Integer.parseInt(jTextSemester.getText());
-                if (score.isSidSemesterExist(sid, semesterNo)) {
-                    if (isNumeric(jTextScore1.getText()) && isNumeric(jTextScore2.getText()) && isNumeric(jTextScore3.getText()) && isNumeric(jTextScore4.getText()) && isNumeric(jTextScore5.getText())) {
-                        int id = score.getMax();
-                        String course1 = jTextCourse1.getText();
-                        String course2 = jTextCourse2.getText();
-                        String course3 = jTextCourse3.getText();
-                        String course4 = jTextCourse4.getText();
-                        String course5 = jTextCourse5.getText();
-                        
-                        double score1 = Double.parseDouble(jTextScore1.getText());
-                        double score2 = Double.parseDouble(jTextScore2.getText());
-                        double score3 = Double.parseDouble(jTextScore3.getText());
-                        double score4 = Double.parseDouble(jTextScore4.getText());
-                        double score5 = Double.parseDouble(jTextScore5.getText());
-                        
-                        double average = (score1 + score2 + score3 + score4 + score5) / 5;
-                        nf.setMaximumFractionDigits(2);
-                        score.insert(id, sid, semesterNo, course1, course2, course3, course4, course5, score1, score2, score3, score4, score5, Double.parseDouble(nf.format(average)));
-                        jTable3.setModel(new DefaultTableModel(null, new Object[]{"ID", "Student ID", "Semester", "Course 1", "Score 1", "Course 2", "Score 2", "Course 3", "Score 3", "Course 4", "Score 4", "Course 5", "Score 5", "Average"}));
-                        score.getScoreValue(jTable3, "");
-                        clearScore();
-                    }
-                } else {
-                    JOptionPane.showMessageDialog(this, "Semester " + semesterNo + " score already added");
-                }
-            } else {
-                JOptionPane.showMessageDialog(this, "Score id already exist");
-            }
-        } else {
-            JOptionPane.showMessageDialog(this, "No student selected");
-        }
-    }//GEN-LAST:event_jButton22ActionPerformed
-
-    private void jTable3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable3MouseClicked
-        model = (DefaultTableModel) jTable3.getModel();
-        rowIndex = jTable3.getSelectedRow();
-        jTextField13.setText(model.getValueAt(rowIndex, 0).toString());
-        jTextField14.setText(model.getValueAt(rowIndex, 1).toString());
-        jTextSemester.setText(model.getValueAt(rowIndex, 2).toString());
-        
-        jTextCourse1.setText(model.getValueAt(rowIndex, 3).toString());
-        jTextCourse2.setText(model.getValueAt(rowIndex, 5).toString());
-        jTextCourse3.setText(model.getValueAt(rowIndex, 7).toString());
-        jTextCourse4.setText(model.getValueAt(rowIndex, 9).toString());
-        jTextCourse5.setText(model.getValueAt(rowIndex, 11).toString());
-        
-        jTextScore1.setText(model.getValueAt(rowIndex, 4).toString());
-        jTextScore2.setText(model.getValueAt(rowIndex, 6).toString());
-        jTextScore3.setText(model.getValueAt(rowIndex, 8).toString());
-        jTextScore4.setText(model.getValueAt(rowIndex, 10).toString());
-        jTextScore5.setText(model.getValueAt(rowIndex, 12).toString());
-    }//GEN-LAST:event_jTable3MouseClicked
-
-    private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
-        int id = Integer.parseInt(jTextField13.getText());
-        if (score.isIdExist(id)) {
-            if (isNumeric(jTextScore1.getText()) && isNumeric(jTextScore2.getText()) && isNumeric(jTextScore3.getText()) && isNumeric(jTextScore4.getText()) && isNumeric(jTextScore5.getText())) {
-                double score1 = Double.parseDouble(jTextScore1.getText());
-                double score2 = Double.parseDouble(jTextScore2.getText());
-                double score3 = Double.parseDouble(jTextScore3.getText());
-                double score4 = Double.parseDouble(jTextScore4.getText());
-                double score5 = Double.parseDouble(jTextScore5.getText());
-                
-                double average = (score1 + score2 + score3 + score4 + score5) / 5;
-                nf.setMaximumFractionDigits(2);
-                score.update(id, score1, score2, score3, score4, score5, Double.parseDouble(nf.format(average)));
-                jTable3.setModel(new DefaultTableModel(null, new Object[]{"ID", "Student ID", "Semester", "Course 1", "Score 1", "Course 2", "Score 2", "Course 3", "Score 3", "Course 4", "Score 4", "Course 5", "Score 5", "Average"}));
-                score.getScoreValue(jTable3, "");
-                clearScore();
-            }
-        } else {
-            JOptionPane.showMessageDialog(this, "Score id doesn't exist");
-        }
-    }//GEN-LAST:event_jButton23ActionPerformed
-
-    private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
-        try {
-            MessageFormat header = new MessageFormat("Students Scores");
-            MessageFormat footer = new MessageFormat("Page{0,number, integer}");
-            jTable3.print(JTable.PrintMode.FIT_WIDTH, header, footer);
-            
-        } catch (PrinterException ex) {
-            Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_jButton25ActionPerformed
-
-    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
-        if (searchField2.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Search field is empty");
-        } else {
-            jTable3.setModel(new DefaultTableModel(null, new Object[]{"ID", "Student ID", "Semester", "Course 1", "Score 1", "Course 2", "Score 2", "Course 3", "Score 3", "Course 4", "Score 4", "Course 5", "Score 5", "Average"}));
-            score.getScoreValue(jTable3, searchField2.getText());
-        }
-    }//GEN-LAST:event_jButton20ActionPerformed
-
-    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
-        jTable3.setModel(new DefaultTableModel(null, new Object[]{"ID", "Student ID", "Semester", "Course 1", "Score 1", "Course 2", "Score 2", "Course 3", "Score 3", "Course 4", "Score 4", "Course 5", "Score 5", "Average"}));
-        score.getScoreValue(jTable3, "");
-        searchField2.setText(null);
-    }//GEN-LAST:event_jButton21ActionPerformed
-
-    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
-        if (jTextField25.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Please enter a student id");
-        } else {
-            int sid = Integer.parseInt(jTextField25.getText());
-            if (markSheet.isIdExist(sid)) {
-                jTable4.setModel(new DefaultTableModel(null, new Object[]{"ID", "Student ID", "Semester", "Course 1", "Score 1", "Course 2", "Score 2", "Course 3", "Score 3", "Course 4", "Score 4", "Course 5", "Score 5", "Average"}));
-                markSheet.getScoreValue(jTable4, sid);
-                String cgpa = String.valueOf(String.format("%.2f", markSheet.getCGPA(sid)));
-                jLabel30.setText("CGPA: " + cgpa);
-            } else {
-                JOptionPane.showMessageDialog(this, "No scores founded");
-            }
-        }
-    }//GEN-LAST:event_jButton17ActionPerformed
-
-    private void jButton35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton35ActionPerformed
-        jTextField25.setText(null);
-        jLabel30.setText("CGPA: 0.0");
-        jTable4.setModel(new DefaultTableModel(null, new Object[]{"ID", "Student ID", "Semester", "Course 1", "Score 1", "Course 2", "Score 2", "Course 3", "Score 3", "Course 4", "Score 4", "Course 5", "Score 5", "Average"}));
-    }//GEN-LAST:event_jButton35ActionPerformed
-
-    private void jButton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton34ActionPerformed
-        try {
-            MessageFormat header = new MessageFormat("Marks Sheet  Student ID" + jTextField25.getName() + "   " + jLabel30.getText());
-            MessageFormat footer = new MessageFormat("Page{0,number, integer}");
-            jTable4.print(JTable.PrintMode.FIT_WIDTH, header, footer);
-            
-        } catch (PrinterException ex) {
-            Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_jButton34ActionPerformed
-
-    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-        for (double i = 0.1; i <= 1.0; i += 0.1) {
-            String s = i + "";
-            float f = Float.valueOf(s);
-            this.setOpacity(f);
-            try {
-                Thread.sleep(40);
-            } catch (InterruptedException ex) {
-                Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-    }//GEN-LAST:event_formWindowOpened
+    private void tfPhoneNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfPhoneNumberActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfPhoneNumberActionPerformed
     
     private boolean isNumeric(String s) {
         try {

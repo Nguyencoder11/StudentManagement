@@ -176,6 +176,7 @@ public class Score {
             }
         } catch (SQLException ex) {
             Logger.getLogger(Score.class.getName()).log(Level.SEVERE, null, ex);
+            
         }
     }
 }
